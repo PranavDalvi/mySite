@@ -1,0 +1,89 @@
+/* https://www.youtube.com/watch?v=UmzFk68Bwdk */
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #e65f3f;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+.article-header {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100svh;
+  overflow-x: clip;
+  padding-block: 7rem;
+  margin-block-end: 3rem;
+}
+
+.header-content {
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit -200px;
+}
+
+.header-image {
+  grid-column: 1 / -1 !important;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@supports (animation-timeline: view()) {
+  .header-image {
+    animation: header-image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  article > img {
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes header-image-animation {
+    25% {
+      opacity: 1;
+    }
+    85%,
+    100% {
+      opacity: 0;
+      scale: 3;
+    }
+  }
+}
