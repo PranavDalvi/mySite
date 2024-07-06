@@ -165,6 +165,47 @@ a:link {
     margin: 8px 0;
 }
 
+.tag-list{
+    margin: 0;
+    padding-inline: 0;
+    list-style-type: none;
+}
+
+.tag-list li {
+    padding: 1rem;
+    background-color: #1a1b1d;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem #0f141e;
+}
+
+.scroller{
+    max-width: 1000px;
+}
+
+.scroller__inner{
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"]{
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner{
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
+}
+
+@keyframes scroll {
+    to{
+        transform: translate(-20%);
+    }
+}
+
 @supports (animation-timeline: view()) {
     .header-image {
         animation: header-image-animation linear forwards;
