@@ -248,3 +248,9 @@ a:link {
         }
     }
 }
+
+@media (min-width: 320px) {
+    .article-content {
+        width: 100%;
+    }
+}
