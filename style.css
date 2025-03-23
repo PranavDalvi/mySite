@@ -200,6 +200,12 @@ a:link {
     animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
 }
 
+.notice{
+    background-color: #1e130f;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 @keyframes scroll {
     to{
         transform: translate(-20%);
