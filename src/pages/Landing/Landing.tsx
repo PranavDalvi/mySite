@@ -1,7 +1,7 @@
-const Landing = () => {
-  return (
-    <div>Landing</div>
-  )
-}
+import Navigation from "../../components/Navigation/Navigation";
 
-export default Landing
+const Landing = () => {
+  return <Navigation />;
+};
+
+export default Landing;

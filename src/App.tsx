@@ -1,13 +1,14 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router";
+import Loader from "./components/Loader/Loader.tsx";
 
 const Landing = lazy(() => import("./pages/Landing/Landing.tsx"));
-const NotFound = () => <div>404 Not Found</div>;
+const NotFound = lazy(() => import("./pages/NotFound/NotFound.tsx"));
 
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="*" element={<NotFound />} />
