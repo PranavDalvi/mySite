@@ -43,7 +43,7 @@ export default function Projects() {
   const [next1, next2] = getNextIndices();
 
   return (
-    <div className="grid grid-cols-3 gap-6 p-6 items-start">
+    <div className="grid grid-cols-3 gap-6 mt-10 items-start">
       {/* Main Large Project (Left Side) */}
       <div className="col-span-2">
         <AnimatePresence mode="wait">
@@ -58,7 +58,7 @@ export default function Projects() {
             <img
               src={projects[activeIndex].image}
               alt={projects[activeIndex].title}
-              className="rounded-xl mb-4 w-full h-96 object-fit"
+              className="rounded-xl mb-4 w-full h-full object-fit"
             />
             <h2 className="text-2xl font-bold mb-2">
               {projects[activeIndex].title}
@@ -89,7 +89,7 @@ export default function Projects() {
             <img
               src={projects[index].image}
               alt={projects[index].title}
-              className="rounded-xl mb-2 w-full h-40 object-fit"
+              className="rounded-xl mb-2 w-full h-full object-fit"
             />
             <h3 className="text-lg font-semibold">{projects[index].title}</h3>
           </motion.div>
