@@ -9,12 +9,16 @@ const Experience = () => {
       </h1>
 
       {/* stack each TimelineItem with vertical spacing */}
-      <div className="space-y-12">
+      <div>
         {experiences.map((item, index) => (
           <TimelineItem
             key={index}
             {...item}
-            isLastItem={index === experiences.length - 1} // Check if it's the last item
+            isFirstItem={index === 0}
+            isLastItem={index === experiences.length - 1} // Check if it's the last item /he
+            prevAccentEnd={
+              index > 0 ? experiences[index - 1].accent[1] : undefined
+            }
           />
         ))}
       </div>
