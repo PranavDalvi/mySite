@@ -3,6 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import MetricsCards from "../../components/MetricsCards/MetricsCards";
 import Navigation from "../../components/Navigation/Navigation";
 import Projects from "../../components/Projects/Projects";
+import { Skillset } from "../../components/Skillset/Skillset";
 import Values from "../../components/Values/Values";
 
 const Landing = () => {
@@ -14,6 +15,7 @@ const Landing = () => {
       <Projects />
       <Values />
       <Experience />
+      <Skillset />
     </>
   );
 };

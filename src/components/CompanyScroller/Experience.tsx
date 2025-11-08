@@ -1,10 +1,13 @@
 import { TimelineItem } from "./TimelineItem";
 import { experiences } from "../../data/experiences";
+import { BriefcaseBusiness } from "lucide-react";
+import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
 
 const Experience = () => {
   return (
     <div className="mt-10  min-h-screen p-12">
-      <h1 className="text-4xl font-extrabold text-white mb-8">
+      <NewSectionTitle icon={BriefcaseBusiness} title="My Career Overview" />
+      <h1 className="text-5xl font-semibold text-white mb-8 text-center">
         Professional Work Experience
       </h1>
 
