@@ -1,5 +1,6 @@
 import { Medal, MessageCircleMore, Timer } from "lucide-react";
 import ValueCard from "./ValueCard";
+import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
 
 const Values = () => {
   const valuesData = [
@@ -24,16 +25,24 @@ const Values = () => {
   ];
 
   return (
-    <div className="mt-10 flex flex-row gap-5">
-      {valuesData.map((value, index) => (
-        <ValueCard
-          key={index}
-          icon={value.icon}
-          title={value.title}
-          description={value.description}
-        />
-      ))}
-    </div>
+    <>
+      <NewSectionTitle
+        className="mt-10 mb-6"
+        icon={Medal}
+        title="My Core Values"
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 md:px-0">
+        {valuesData.map((value, index) => (
+          <div key={index} className="">
+            <ValueCard
+              icon={value.icon}
+              title={value.title}
+              description={value.description}
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

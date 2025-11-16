@@ -5,10 +5,15 @@ import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
 
 const Experience = () => {
   return (
-    <div className="mt-10  min-h-screen p-12">
-      <NewSectionTitle icon={BriefcaseBusiness} title="My Career Overview" />
-      <h1 className="text-5xl font-semibold text-white mb-8 text-center">
-        Professional Work Experience
+    <div className="mt-10 min-h-screen p-6 md:p-12">
+      <NewSectionTitle
+        className="mb-6"
+        icon={BriefcaseBusiness}
+        title="My Career Overview"
+      />
+      <h1 className="text-2xl md:text-5xl font-semibold text-white mb-6 md:mb-8 text-center leading-tight">
+        <span className="block">Professional Work</span>
+        <span className="block">Experience</span>
       </h1>
 
       {/* stack each TimelineItem with vertical spacing */}

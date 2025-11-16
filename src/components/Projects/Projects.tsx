@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
+import { PanelsTopLeft } from "lucide-react";
 
 const projects = [
   {
@@ -26,14 +28,18 @@ const projects = [
 export default function Projects() {
   return (
     <>
-      {/* Mobile: horizontal slider showing all projects */}
-      <div className="md:hidden mt-10 overflow-x-auto -mx-4 px-4">
-        <div className="flex gap-4 snap-x snap-mandatory">
+      <NewSectionTitle
+        className="mt-10"
+        icon={PanelsTopLeft}
+        title="Projects I've Worked On"
+      />
+      <div className="md:hidden px-4">
+        <div className="grid grid-cols-1 gap-4">
           {projects.map((p) => (
             <motion.a
               key={p.title}
               href={p.url}
-              className="snap-center min-w-[85%] transperent-card rounded-xl shadow-xl p-4 block"
+              className="w-full transperent-card rounded-xl shadow-xl p-4 block"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

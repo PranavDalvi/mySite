@@ -6,7 +6,7 @@ interface ValueCardProps {
 
 const ValueCard = ({ icon, title, description }: ValueCardProps) => {
   return (
-    <div className="w-full h-full p-5 flex flex-col gap-2 border border-[#1c1c21] transperent-card rounded-lg">
+    <div className="w-full h-full p-5 flex flex-col gap-2 border border-[#1c1c21] transperent-card rounded-lg items-center md:items-start text-center md:text-left">
       {icon}
       <span className="font-semibold text-xl">{title}</span>
       <span className="text-md text-gray-300">{description}</span>
