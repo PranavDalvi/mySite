@@ -1,15 +1,12 @@
 import { useState, useEffect, useRef } from "react";
+import useScrollNav from "../../hooks/useScrollNav";
 import { Menu, X } from "lucide-react";
 import Button from "../Button/Button";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
-  const [showNav, setShowNav] = useState(true);
-  const [isAtTop, setIsAtTop] = useState(true);
-  const prevY = useRef<number>(
-    typeof window !== "undefined" ? window.scrollY : 0
-  );
+  const { showNav, isAtTop } = useScrollNav(open);
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
@@ -33,35 +30,7 @@ const Navigation = () => {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // show/hide navbar on scroll and toggle floaty appearance when at top
-  useEffect(() => {
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const current = window.scrollY;
-        // Consider "at top" when within first 20px
-        if (current <= 20) {
-          setIsAtTop(true);
-          setShowNav(true);
-        } else {
-          setIsAtTop(false);
-          // if scrolling down and past threshold, hide; if scrolling up, show
-          if (current > prevY.current && current > 100 && !open) {
-            setShowNav(false);
-          } else {
-            setShowNav(true);
-          }
-        }
-        prevY.current = current;
-        ticking = false;
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [open]);
+  // Scroll behaviour is handled by `useScrollNav` hook
 
   return (
     // Make the navbar sticky so it remains visible at the top while scrolling
@@ -71,7 +40,7 @@ const Navigation = () => {
       } ${isAtTop ? "top-5" : "top-0"}`}
     >
       <div
-        className={`nav-wrapper flex flex-row justify-between items-center gap-4 transperent-card p-5 rounded-xl transition-all duration-300 ${
+        className={`nav-wrapper flex flex-row justify-between items-center gap-4 transperent-card p-4 rounded-xl transition-all duration-300 ${
           isAtTop ? "floaty" : "flat"
         }`}
       >
@@ -79,38 +48,32 @@ const Navigation = () => {
 
         {/* Desktop links */}
         <ul className="hidden md:flex flex-row gap-4 items-center">
-          <li className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg">
-            <a
-              href="#work"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToId("work");
-              }}
-            >
-              Work
-            </a>
+          <li
+            className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("work");
+            }}
+          >
+            <a href="#work">Work</a>
           </li>
-          <li className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg">
-            <a
-              href="#skills"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToId("skills");
-              }}
-            >
-              Skills
-            </a>
+          <li
+            className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("skills");
+            }}
+          >
+            <a href="#skills">Skills</a>
           </li>
-          <li className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg">
-            <a
-              href="#experience"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToId("experience");
-              }}
-            >
-              Experience
-            </a>
+          <li
+            className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("experience");
+            }}
+          >
+            <a href="#experience">Experience</a>
           </li>
         </ul>
 
@@ -145,7 +108,7 @@ const Navigation = () => {
           open ? "max-h-96" : "max-h-0"
         }`}
       >
-  <div className={`flex flex-col p-5 gap-2`}>
+        <div className={`flex flex-col p-4 gap-2`}>
           <a
             href="#work"
             onClick={(e) => {

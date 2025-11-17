@@ -7,7 +7,18 @@ export const TimelineItem: React.FC<
     isLastItem?: boolean;
     prevAccentEnd?: string;
   }
-> = ({ accent, role, dateRange, responsibilities, prevAccentEnd }) => {
+> = ({
+  accent,
+  role,
+  dateRange,
+  description,
+  responsibilities,
+  prevAccentEnd,
+  company,
+  jobType,
+  location,
+  projectName,
+}) => {
   return (
     <div className="relative pl-10 md:pl-14 py-8 md:py-10">
       {/* Top segment: from previous accent end (if provided) into this item start */}
@@ -38,8 +49,17 @@ export const TimelineItem: React.FC<
 
       {/* Content */}
       <div className="relative z-10">
-        <h3 className="text-lg md:text-2xl font-bold text-white">{role}</h3>
-        <p className="text-sm text-gray-400 mb-3 md:mb-4">{dateRange}</p>
+        <h3 className="text-lg md:text-2xl font-bold text-white">
+          {projectName} - {role} - {company}
+        </h3>
+        <p className="text-sm text-gray-400 mb-3 md:mb-4">
+          {dateRange} | {jobType} | {location}
+        </p>
+        {description && (
+          <div className="mb-3 md:mb-4 text-gray-300 text-sm md:text-base">
+            {description}
+          </div>
+        )}
         <ul className="list-disc list-inside space-y-1 md:space-y-2 text-gray-200 text-sm md:text-base">
           {responsibilities.map((task, i) => (
             <li key={i}>{task}</li>

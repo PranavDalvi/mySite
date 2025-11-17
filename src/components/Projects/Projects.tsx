@@ -4,24 +4,37 @@ import { PanelsTopLeft } from "lucide-react";
 
 const projects = [
   {
-    title: "Ryde - Ride Sharing App",
+    title: "InLuna - Advanced Phishing Detection",
     description:
-      "An app built with React Native, Expo, and TailwindCSS for a fast, user-friendly ride experience.",
-    image: "src/assets/p1.png",
-    url: "#",
+      "InLuna is a behavior-based phishing detection, intelligent insights, and micro-training platform utilizing ML-based detection engine all from one lightweight browser extension.",
+    image: "src/assets/projects/InLuna.jpeg",
+    url: "https://www.excellitude.com",
+    urlTitle: "Coming Soon",
+    timeline: "APR 2024 - PRESENT",
+    for: "Excellitude pvt ltd",
+    jobType: "Part-time",
   },
   {
-    title: "BookWise - Library Platform",
-    description: "A modern platform to manage and explore books with ease.",
-    image: "src/assets/p2.png",
-    url: "#",
+    title: "Droolin - Behavioral Commerce for Restaurants",
+    description:
+      "Droolin is a behavioral commerce layer for modern restaurants - unlocking performance, loyalty, and brand identity through menu intelligence.",
+    image: "src/assets/projects/Droolin.jpeg",
+    url: "https://www.excellitude.com",
+    urlTitle: "Coming Soon",
+    timeline: "MAY 2025 - PRESENT",
+    for: "Excellitude pvt ltd",
+    jobType: "Part-time",
   },
   {
-    title: "YC Directory",
+    title: "Project Udaan - AI-Powered Translation Platform",
     description:
-      "A showcase platform for YC startups, helping connect entrepreneurs and investors.",
-    image: "src/assets/p3.png",
-    url: "#",
+      "The Udaan project enables translation of textbooks and learning materials, across English and all Indian languages. It leverages AI and ML technologies to provide high-quality translations, making education more accessible to students nationwide.",
+    image: "src/assets/projects/Project-Udaan.webp",
+    url: "https://udaanproject.org",
+    urlTitle: "View",
+    timeline: "AUG 2023 - JAN 2024",
+    for: "IIT Bombay",
+    jobType: "Internship",
   },
 ];
 
@@ -63,6 +76,7 @@ export default function Projects() {
           <motion.a
             key={p.title}
             href={p.url}
+            target="_blank"
             className="transperent-card rounded-xl shadow-xl p-4 flex flex-col hover:translate-y-[-2px] transition-transform"
             whileHover={{ scale: 1.01 }}
           >
@@ -75,7 +89,10 @@ export default function Projects() {
             </div>
             <h3 className="text-xl font-semibold mb-1">{p.title}</h3>
             <p className="text-gray-400 text-sm flex-1">{p.description}</p>
-            <span className="mt-3 font-semibold">Visit</span>
+            <span className="mt-1 text-sm text-gray-500">
+              {p.timeline} | {p.for} | {p.jobType}
+            </span>
+            <span className="mt-3 font-semibold">{p.urlTitle}</span>
           </motion.a>
         ))}
       </div>

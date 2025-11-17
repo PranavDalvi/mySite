@@ -20,7 +20,7 @@ export const Skillset = () => {
         {skills.map((skill: Skill) => (
           <div
             key={skill.name}
-            className="bg-[#1e1e1e] p-5 rounded-lg shadow-lg"
+            className="bg-[#1e1e1e] p-6 rounded-lg shadow-lg"
           >
             <div className="flex items-center gap-3 mb-2">
               {skill.icon ? (

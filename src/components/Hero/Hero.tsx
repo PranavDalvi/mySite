@@ -1,8 +1,19 @@
 import { ArrowDown } from "lucide-react";
 import heroImage from "../../assets/image-188.png";
 import Button from "../Button/Button";
+import useScrollNav from "../../hooks/useScrollNav";
 
 const Hero = () => {
+  const { isAtTop } = useScrollNav(false);
+
+  const scrollToWork = () => {
+    const el = document.getElementById("work");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "#work";
+    }
+  };
   return (
     <div className="mt-20 flex flex-col-reverse md:flex-row gap-10 items-center justify-center px-4 md:px-0">
       <div className="flex-1">
@@ -17,7 +28,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="mt-5 flex justify-center md:justify-start">
-          <Button className="">
+          <Button onClick={scrollToWork} className="">
             See My Work <ArrowDown />
           </Button>
         </div>
