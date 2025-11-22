@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router";
 import Loader from "./components/Loader/Loader.tsx";
+import { Dvimaya } from "./pages/Projects/Dvimaya.tsx";
 
 const Landing = lazy(() => import("./pages/Landing/Landing.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound/NotFound.tsx"));
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/projects/dvimaya" element={<Dvimaya />} />
         </Routes>
       </Suspense>
     </>

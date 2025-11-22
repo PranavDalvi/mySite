@@ -38,7 +38,7 @@ export const ContactForm = () => {
       <div className="flex flex-col-reverse md:flex-row gap-8 items-stretch justify-center px-4 md:px-0">
         <form
           onSubmit={handleSubmit}
-          className="w-full md:w-2/3 max-w-xl flex flex-col bg-[#1e1e1e] p-6 rounded-3xl md:rounded-l-3xl md:rounded-r-none shadow-lg"
+          className="w-full md:w-2/3 max-w-xl flex flex-col transperent-card p-6 rounded-3xl md:rounded-l-3xl md:rounded-r-none shadow-lg"
         >
           <div className="mb-4 mt-auto">
             <label
@@ -51,7 +51,7 @@ export const ContactForm = () => {
               name="name"
               type="text"
               id="name"
-              className="w-full p-3 bg-[#2e2e2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 bg-[#1e1e1e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your Name"
             />
           </div>
@@ -66,7 +66,7 @@ export const ContactForm = () => {
               name="email"
               type="email"
               id="email"
-              className="w-full p-3 bg-[#2e2e2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 bg-[#1e1e1e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your Email"
             />
           </div>
@@ -81,14 +81,14 @@ export const ContactForm = () => {
               name="message"
               id="message"
               rows={5}
-              className="w-full px-3 py-2 bg-[#2e2e2e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-[#1e1e1e] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your Message"
             ></textarea>
           </div>
           <div className="mt-auto">
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 font-semibold bg-[#e9f1f9] text-black w-full py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="flex items-center justify-center gap-2 font-semibold bg-[#e9f1f9] text-black w-full py-3 rounded-lg hover:bg-[#d1e3f8] transition-colors"
             >
               Send Message <ArrowRight />
             </button>

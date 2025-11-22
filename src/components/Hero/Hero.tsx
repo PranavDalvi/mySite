@@ -1,10 +1,10 @@
 import { ArrowDown } from "lucide-react";
-import heroImage from "../../assets/image-188.png";
+import heroVideo from "../../assets/blends/sphear-blend.webm";
 import Button from "../Button/Button";
 import useScrollNav from "../../hooks/useScrollNav";
 
 const Hero = () => {
-  const { isAtTop } = useScrollNav(false);
+  useScrollNav(false);
 
   const scrollToWork = () => {
     const el = document.getElementById("work");
@@ -34,10 +34,15 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex-shrink-0">
-        <img
-          className="w-full max-w-xs md:max-w-md"
-          src={heroImage}
-          alt="Hero"
+        <video
+          className="w-full max-w-xs md:max-w-xl rounded-md"
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
         />
       </div>
     </div>
