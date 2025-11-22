@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
 import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
 import { PanelsTopLeft } from "lucide-react";
 import inlunaImage from "../../assets/projects/InLuna.jpeg";
 import droolinImage from "../../assets/projects/Droolin.jpeg";
 import udaanImage from "../../assets/projects/Project-Udaan.webp";
 import dvimayaImage from "../../assets/projects/Dvimaya/dvimaya-1.png";
+import { Link } from "react-router";
 
 const projects = [
   {
@@ -12,7 +12,7 @@ const projects = [
     description:
       "This project implements a malware detection system using machine learning and binary visualization techniques. It aims to classify .exe files as safe or malicious based on visualized binary patterns. This repository includes the dataset and model used for the final year MSc in Computer Science research project.",
     image: dvimayaImage,
-    url: "/mySite/projects/dvimaya",
+    url: "/projects/dvimaya",
     urlTitle: "View",
     timeline: "OCT 2024 - MAY 2025",
     for: "Master's Research Project",
@@ -64,14 +64,12 @@ export default function Projects() {
 
       <div className="px-4 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-stretch">
         {projects.map((p) => (
-          <motion.a
+          <Link
             key={p.title}
-            href={p.url}
+            to={p.url}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full transperent-card rounded-xl shadow-xl p-4 flex flex-col"
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.98 }}
           >
             <div className="rounded-lg overflow-hidden mb-3">
               <img
@@ -87,7 +85,7 @@ export default function Projects() {
             <p className="text-gray-400 text-sm flex-1">{p.description}</p>
 
             <span className="mt-3 font-semibold">{p.urlTitle}</span>
-          </motion.a>
+          </Link>
         ))}
       </div>
     </>
