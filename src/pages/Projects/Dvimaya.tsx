@@ -1,9 +1,15 @@
 import ProjectHeader from "../../components/ProjectHeader/ProjectHeader";
+import { useEffect } from "react";
 import image1 from "../../assets/projects/Dvimaya/dvimaya-1.png";
 import image2 from "../../assets/projects/Dvimaya/dvimaya-2.png";
 import image3 from "../../assets/projects/Dvimaya/dvimaya-3.png";
 
 export const Dvimaya = () => {
+  // Ensure the page scrolls to the top when this route is mounted
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
+
   return (
     <div>
       <ProjectHeader
@@ -16,7 +22,7 @@ export const Dvimaya = () => {
           <div className="flex items-center justify-center">
             <img
               src={image1}
-              className="h-[500px] rounded-xl "
+              className="w-[500px] rounded-xl "
               alt="Dvimaya screenshot 1"
             />
           </div>
@@ -47,7 +53,7 @@ export const Dvimaya = () => {
           <div className="flex items-center justify-center">
             <img
               src={image2}
-              className="h-[500px] rounded-xl "
+              className="w-[500px] rounded-xl "
               alt="Dvimaya screenshot 2"
             />
           </div>
@@ -65,7 +71,7 @@ export const Dvimaya = () => {
           <div className="flex items-center justify-center">
             <img
               src={image3}
-              className="h-[500px] rounded-xl "
+              className="w-[500px] rounded-xl "
               alt="Dvimaya screenshot 3"
             />
           </div>
