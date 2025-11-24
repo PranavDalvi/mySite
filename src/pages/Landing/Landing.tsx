@@ -21,6 +21,14 @@ const Landing = () => {
       <Experience />
       <section id="skills" />
       <Skillset />
+      <section id="leetcode" className="my-12 flex justify-center">
+        <a href="https://leetcode.com/u/pranavd128/">
+          <img
+            src="https://leetcard.jacoblin.cool/pranavd128?ext=activity"
+            alt="LeetCode Stats"
+          />
+        </a>
+      </section>
       <section id="contact" />
       <ContactForm />
       <Footer />
