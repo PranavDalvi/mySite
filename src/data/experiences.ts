@@ -7,7 +7,6 @@ export const experiences: Experience[] = [
         accent: ["#9b5cf5", "#5a85f5"],
         projectName: "InLuna",
         role: "MERN Stack Developer",
-        jobType: "",
         location: "Remote",
         dateRange: "April 2024 – Present",
         description:
@@ -27,7 +26,6 @@ export const experiences: Experience[] = [
         projectName: "Droolin",
         role: "NextJS Developer",
         dateRange: "May 2025 – Present",
-        jobType: "",
         location: "Remote",
         description:
             "Droolin is a behavioral commerce layer for modern restaurants - unlocking performance, loyalty, and brand identity through menu intelligence.",
@@ -45,7 +43,6 @@ export const experiences: Experience[] = [
         projectName: "Project Udaan",
         role: "Backend Developer",
         dateRange: "August 2023 – January 2024",
-        jobType: "",
         location: "Powai",
         description:
             "The Udaan project enables translation of textbooks and learning materials, across English and all Indian languages.",
