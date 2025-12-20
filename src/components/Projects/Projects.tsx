@@ -2,6 +2,8 @@ import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
 import { PanelsTopLeft } from "lucide-react";
 import { Link } from "react-router";
 import { projects } from "../../data/projects";
+import Batch from "../Batch/Batch";
+import { techStackIcons } from "../../data/techStackMeta";
 
 export default function Projects() {
     return (
@@ -37,6 +39,19 @@ export default function Projects() {
                             <p className="text-gray-400 text-sm flex-1">
                                 {p.description}
                             </p>
+                            <div className="flex flex-row flex-wrap gap-2 my-4 w-full">
+                                {p.techStack?.map((t) => {
+                                    const meta = techStackIcons[t];
+                                    return (
+                                        <Batch
+                                            key={t}
+                                            title={t}
+                                            icon={meta?.icon}
+                                            backgroundColor={meta?.color}
+                                        />
+                                    );
+                                })}
+                            </div>
                             <span className="mt-3 font-semibold">
                                 {p.urlTitle}
                             </span>

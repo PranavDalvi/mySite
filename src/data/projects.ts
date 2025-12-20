@@ -4,6 +4,7 @@ import inlunaImage from "../assets/projects/InLuna.jpeg";
 import droolinImage from "../assets/projects/Droolin.jpeg";
 import udaanImage from "../assets/projects/Project-Udaan.webp";
 import dvimayaImage from "../assets/projects/Dvimaya/dvimaya-1.png";
+import frontend_chall from "../assets/projects/FrontEnd_Challanges/frontend-chall.svg";
 
 export const projects: Project[] = [
     {
@@ -16,6 +17,18 @@ export const projects: Project[] = [
         urlTitle: "View",
         dateRange: "OCT 2024 - MAY 2025",
         for: "Master's Research Project",
+        techStack: ["Python", "Machine Learning"],
+    },
+    {
+        projectName: "Front End Challanges",
+        description:
+            "This Site contains my frontend challanges completed and which are hosted live.",
+        image: frontend_chall,
+        url: "https://pranavdalvi.github.io/frontend-mentor/",
+        urlTitle: "View",
+        dateRange: "NOV 2025 - Present",
+        for: "Self",
+        techStack: ["HTML5", "CSS3", "GitHub Actions"],
     },
     {
         projectName: "InLuna - Advanced Phishing Detection",
@@ -26,6 +39,15 @@ export const projects: Project[] = [
         urlTitle: "View",
         dateRange: "APR 2024 - Present",
         for: "Excellitude pvt ltd",
+        techStack: [
+            "MongoDB",
+            "Express",
+            "React",
+            "Node.js",
+            "AWS",
+            "Tailwind CSS",
+            "NGINX",
+        ],
     },
     {
         projectName: "Droolin - Behavioral Commerce for Restaurants",
@@ -36,6 +58,7 @@ export const projects: Project[] = [
         urlTitle: "Coming Soon",
         dateRange: "MAY 2025 - Present",
         for: "Excellitude pvt ltd",
+        techStack: ["Next.js", "MongoDB", "AWS", "Tailwind CSS", "NGINX"],
     },
     {
         projectName: "Project Udaan - AI-Powered Translation Platform",
@@ -46,5 +69,14 @@ export const projects: Project[] = [
         urlTitle: "View",
         dateRange: "AUG 2023 - JAN 2024",
         for: "IIT Bombay",
+        techStack: [
+            "Python",
+            "Flask",
+            "NumPy",
+            "OpenCV",
+            "Tesseract OCR",
+            "Beautiful Soup 4",
+            "NGROK",
+        ],
     },
 ];
