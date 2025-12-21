@@ -1,6 +1,8 @@
+import type { ComponentType } from "react";
+
 export interface BatchProps {
     title: string;
-    icon?: React.ComponentType<{ width?: number; height?: number }>;
+    icon?: ComponentType<{ width?: number; height?: number }>;
     backgroundColor?: string;
     version?: string;
 }
