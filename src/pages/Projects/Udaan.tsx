@@ -9,7 +9,7 @@ const Udaan: React.FC = () => {
         <>
             <ProjectHeader
                 title="Project Udaan"
-                url="https://github.com/PranavDalvi/Dvimaya-App"
+                url="https://udaanproject.org/"
             />
             <div>
                 {/* Header */}

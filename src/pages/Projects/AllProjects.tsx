@@ -1,23 +1,21 @@
-import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
+import { NewSectionTitle } from "../../components/NewSectionTitle/NewSectionTitle";
 import { PanelsTopLeft } from "lucide-react";
 import { Link } from "react-router";
 import { projects } from "../../data/projects";
-import Batch from "../Batch/Batch";
+import Batch from "../../components/Batch/Batch";
 import { techStackIcons } from "../../data/techStackMeta";
 
-export default function Projects() {
-    const topProjects = projects.slice(0, 6);
-
+export default function AllProjects() {
     return (
         <>
             <NewSectionTitle
                 className="mt-10"
                 icon={PanelsTopLeft}
-                title="Projects I've Worked On (Top 6)"
+                title="All Projects"
             />
 
             <div className="px-4 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-stretch">
-                {topProjects.map((p) => {
+                {projects.map((p) => {
                     const isExternal =
                         typeof p.url === "string" &&
                         (p.url.startsWith("http://") ||
@@ -46,7 +44,7 @@ export default function Projects() {
                                     const meta = techStackIcons[t];
                                     return (
                                         <Batch
-                                            key={t}
+                                            key={p.projectName + t}
                                             title={t}
                                             icon={meta?.icon}
                                             backgroundColor={meta?.color}
@@ -85,16 +83,6 @@ export default function Projects() {
                     );
                 })}
             </div>
-            {projects.length > 6 && (
-                <div className="px-4 mt-6 flex justify-center">
-                    <Link
-                        to={"/projects"}
-                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white rounded-md px-4 py-2 shadow"
-                    >
-                        View all projects
-                    </Link>
-                </div>
-            )}
         </>
     );
 }

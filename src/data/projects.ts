@@ -17,7 +17,14 @@ export const projects: Project[] = [
         urlTitle: "View",
         dateRange: "OCT 2024 - MAY 2025",
         for: "Master's Research Project",
-        techStack: ["Python", "Machine Learning"],
+        techStack: [
+            "Python",
+            "TensorFlow",
+            "scikit-learn",
+            "Pandas",
+            "OpenCV",
+            "NumPy",
+        ],
     },
     {
         projectName: "Front End Challanges",

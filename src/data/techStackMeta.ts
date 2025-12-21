@@ -35,6 +35,8 @@ import {
     SiNestjs,
     SiPrisma,
     SiGithubactions,
+    SiPandas,
+    SiScikitlearn,
 } from "react-icons/si";
 
 /**
@@ -80,6 +82,9 @@ export const techStackIcons: Record<
 
     // Machine learning / data
     "Machine Learning": { icon: SiTensorflow, color: "#FF6F00" },
+    TensorFlow: { icon: SiTensorflow, color: "#FF6F00" },
+    Pandas: { icon: SiPandas, color: "#4B8BBE" },
+    "scikit-learn": { icon: SiScikitlearn, color: "#3B3B3B" },
 
     // Databases & queues
     PostgreSQL: { icon: SiPostgresql, color: "#336791" },
