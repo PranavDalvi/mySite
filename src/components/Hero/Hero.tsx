@@ -24,7 +24,8 @@ const Hero = () => {
             <span className="block">that Deliver Results</span>
           </h1>
           <p className="text-sm md:text-base text-gray-300">
-            Hi, I'm Pranav, a developer based in India with a passion for code.
+            Hi, I'm Pranav, a software engineer based in India with a passion
+            for code.
           </p>
         </div>
         <div className="mt-5 flex justify-center md:justify-start">

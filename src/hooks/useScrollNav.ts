@@ -10,7 +10,7 @@ export default function useScrollNav(open: boolean, options?: Options) {
   const [showNav, setShowNav] = useState(true);
   const [isAtTop, setIsAtTop] = useState(true);
   const prevY = useRef<number>(
-    typeof window !== "undefined" ? window.scrollY : 0
+    typeof window !== "undefined" ? window.scrollY : 0,
   );
 
   useEffect(() => {

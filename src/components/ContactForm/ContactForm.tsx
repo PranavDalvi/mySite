@@ -21,7 +21,7 @@ export const ContactForm = () => {
 
     // Build mailto URL. If `recipient` is empty, mailto: will open compose without a 'to' address.
     const mailto = `mailto:${recipient}?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
 
     // Navigate to mailto to open user's mail client
