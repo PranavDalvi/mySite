@@ -10,15 +10,6 @@ const NotFound = () => {
     }
   };
 
-  const scrollToContact = () => {
-    const el = document.getElementById("contact");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      window.location.hash = "#contact";
-    }
-  };
-
   return (
     <main className="min-h-screen flex items-center justify-center px-4 py-20">
       <div className="max-w-3xl w-full text-center rounded-xl transperent-card p-8">
