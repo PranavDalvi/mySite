@@ -1,0 +1,1 @@
+import{j as t}from"./index-Bu9r0n3R.js";const n=({children:e,onClick:s,className:o=""})=>t.jsx("button",{className:`p-2 bg-[#EBF3FA] text-black rounded-lg font-semibold ${o}`,onClick:s,children:t.jsx("div",{className:"flex flex-row gap-2 items-center justify-center",children:e})});export{n as B};
