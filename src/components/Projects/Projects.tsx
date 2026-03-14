@@ -82,7 +82,7 @@ export default function Projects() {
         <div className="px-4 mt-6 flex justify-center">
           <Link
             to={"/projects"}
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white rounded-md px-4 py-2 shadow"
+            className="p-2 bg-[#EBF3FA] text-black rounded-lg font-semibold"
           >
             View all projects
           </Link>

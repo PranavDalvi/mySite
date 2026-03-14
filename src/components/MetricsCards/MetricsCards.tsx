@@ -2,11 +2,10 @@ import Cards from "./Cards";
 
 const MetricsCards = () => {
   return (
-    <div className="mt-20 w-full px-4 md:px-0">
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="items-center mt-20 w-full px-4 md:px-0">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Cards number={2} text="Years of Experience" addPlus={true} />
-        <Cards number={3} text="Current Projects" addPlus={true} />
-        <Cards number={5} text="Completed Projects" addPlus={true} />
+        <Cards number={7} text="Ongoing + Completed Projects" addPlus={false} />
         <Cards number={1} text="Research Paper published" addPlus={false} />
       </div>
     </div>

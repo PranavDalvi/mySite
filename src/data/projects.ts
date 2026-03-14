@@ -1,10 +1,12 @@
 import type { Project } from "../types/project";
 
-import inlunaImage from "../assets/projects/InLuna.jpeg";
-import droolinImage from "../assets/projects/Droolin.jpeg";
+import inlunaImage from "../assets/projects/InLuna-pic.webp";
+import shastraImage from "../assets/projects/sh-astra-pic.webp";
+import droolinImage from "../assets/projects/Droolin-pic.webp";
 import udaanImage from "../assets/projects/Project-Udaan.webp";
 import dvimayaImage from "../assets/projects/Dvimaya/dvimaya-1.png";
 import frontend_chall from "../assets/projects/FrontEnd_Challanges/frontend-chall.svg";
+import PBMImg from "../assets/projects/book-manager-pic.webp";
 
 export const projects: Project[] = [
   {
@@ -41,7 +43,7 @@ export const projects: Project[] = [
     description:
       "InLuna is a behavior-based phishing detection, intelligent insights, and micro-training platform utilizing ML-based detection engine all from one lightweight browser extension.",
     image: inlunaImage,
-    url: "https://www.theinluna.com/",
+    url: "https://in-luna-landing.vercel.app/",
     urlTitle: "View",
     dateRange: "APR 2024 - Present",
     for: "Excellitude pvt ltd",
@@ -60,8 +62,8 @@ export const projects: Project[] = [
     description:
       "Droolin is a behavioral commerce layer for modern restaurants - unlocking performance, loyalty, and brand identity through menu intelligence.",
     image: droolinImage,
-    url: "https://www.excellitude.com",
-    urlTitle: "Coming Soon",
+    url: "https://droolin.vercel.app/",
+    urlTitle: "View",
     dateRange: "MAY 2025 - Present",
     for: "Excellitude pvt ltd",
     techStack: ["Next.js", "MongoDB", "AWS", "Tailwind CSS", "NGINX"],
@@ -84,5 +86,27 @@ export const projects: Project[] = [
       "Beautiful Soup 4",
       "NGROK",
     ],
+  },
+  {
+    projectName: "SH+ASTRA - Cyber Risk Assessment Platform",
+    description:
+      "SH+ASTRA is an enterprise-grade cybersecurity maturity assessment platform. It evaluates organizations against the NIST Cybersecurity Framework 2.0, drives structured assessments through questionnaires and interviews, and produces AI-enhanced risk reports with maturity grades, residual risk scores, and strategic remediation roadmaps.",
+    image: shastraImage,
+    url: "https://sh-astra.vercel.app/",
+    urlTitle: "View",
+    dateRange: "SEP 2025 - OCT 2025",
+    for: "Excellitude pvt ltd",
+    techStack: ["Next.js", "MongoDB", "Tailwind CSS"],
+  },
+  {
+    projectName: "Personal Book Manager - Manage Your library with ease",
+    description:
+      "A full-stack Book Management application built with Next.js, Node.js APIs, MongoDB, and React. Users can register, login, and manage their personal reading list with tags, status tracking, and filters.",
+    image: PBMImg,
+    url: "https://personal-book-manager-mu.vercel.app",
+    urlTitle: "View",
+    dateRange: "March 2026",
+    for: "Assignment",
+    techStack: ["Next.js", "MongoDB", "Tailwind CSS"],
   },
 ];
