@@ -10,10 +10,17 @@ export const Footer = () => {
         <a
           target="_blank"
           href="https://www.linkedin.com/in/pranav-dalvi-03947a207"
+          rel="noopener noreferrer"
+          aria-label="Open LinkedIn profile in a new tab"
         >
           <Linkedin />
         </a>
-        <a target="_blank" href="https://github.com/PranavDalvi">
+        <a
+          target="_blank"
+          href="https://github.com/PranavDalvi"
+          rel="noopener noreferrer"
+          aria-label="Open GitHub profile in a new tab"
+        >
           <Github />
         </a>
         <a href="mailto:pranav.dalvi932@gmail.com">

@@ -40,40 +40,57 @@ const Navigation = () => {
       } ${isAtTop ? "top-5" : "top-0"}`}
     >
       <div
-        className={`nav-wrapper flex flex-row justify-between items-center gap-4 transperent-card p-4 rounded-xl transition-all duration-300 ${
+        className={`nav-wrapper flex flex-row justify-between items-center gap-4 transperent-card p-3.5 md:p-4 rounded-2xl transition-all duration-300 ${
           isAtTop ? "floaty" : "flat"
         }`}
       >
-        <span className="text-shadow text-2xl font-semibold">Pranav Dalvi</span>
+        <span className="display-face text-shadow text-xl md:text-2xl font-bold tracking-tight">
+          Pranav Dalvi
+        </span>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex flex-row gap-4 items-center">
+        <ul className="hidden md:flex flex-row gap-2 items-center">
           <li
-            className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg cursor-pointer"
+            className="transition-colors p-1 rounded-lg cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
               scrollToId("work");
             }}
           >
-            <a href="#work">Work</a>
+            <a
+              href="#work"
+              className="px-3 py-2 text-[#d7e6ff] hover:text-white rounded-lg hover:bg-[rgba(122,178,255,0.16)] transition-colors"
+            >
+              Work
+            </a>
           </li>
           <li
-            className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg cursor-pointer"
+            className="transition-colors p-1 rounded-lg cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
               scrollToId("skills");
             }}
           >
-            <a href="#skills">Skills</a>
+            <a
+              href="#skills"
+              className="px-3 py-2 text-[#d7e6ff] hover:text-white rounded-lg hover:bg-[rgba(122,178,255,0.16)] transition-colors"
+            >
+              Skills
+            </a>
           </li>
           <li
-            className="hover:bg-[#EBF3FA] transition-colors hover:text-black p-2 rounded-lg cursor-pointer"
+            className="transition-colors p-1 rounded-lg cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
               scrollToId("experience");
             }}
           >
-            <a href="#experience">Experience</a>
+            <a
+              href="#experience"
+              className="px-3 py-2 text-[#d7e6ff] hover:text-white rounded-lg hover:bg-[rgba(122,178,255,0.16)] transition-colors"
+            >
+              Experience
+            </a>
           </li>
         </ul>
 
@@ -85,7 +102,7 @@ const Navigation = () => {
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden p-2 rounded-lg hover:bg-white/10"
+            className="md:hidden p-2.5 rounded-xl hover:bg-white/10 border border-[rgba(122,178,255,0.24)]"
           >
             {open ? <X /> : <Menu />}
           </button>
@@ -104,7 +121,7 @@ const Navigation = () => {
       {/* Mobile menu panel */}
       <div
         ref={menuRef}
-        className={`md:hidden absolute left-4 right-4 mt-2 bg-[#1b1b1b] rounded-xl shadow-lg overflow-hidden transition-max-h duration-300 ease-in-out z-50 ${
+        className={`md:hidden absolute left-4 right-4 mt-2 bg-[rgba(8,17,32,0.96)] rounded-2xl border border-[rgba(122,178,255,0.24)] shadow-2xl overflow-hidden transition-max-h duration-300 ease-in-out z-50 ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >
@@ -115,7 +132,7 @@ const Navigation = () => {
               e.preventDefault();
               scrollToId("work");
             }}
-            className="p-2 rounded hover:bg-white/5"
+            className="p-2.5 rounded-lg text-[#dbe8ff] hover:bg-white/5"
           >
             Work
           </a>
@@ -125,7 +142,7 @@ const Navigation = () => {
               e.preventDefault();
               scrollToId("skills");
             }}
-            className="p-2 rounded hover:bg-white/5"
+            className="p-2.5 rounded-lg text-[#dbe8ff] hover:bg-white/5"
           >
             Skills
           </a>
@@ -135,7 +152,7 @@ const Navigation = () => {
               e.preventDefault();
               scrollToId("experience");
             }}
-            className="p-2 rounded hover:bg-white/5"
+            className="p-2.5 rounded-lg text-[#dbe8ff] hover:bg-white/5"
           >
             Experience
           </a>

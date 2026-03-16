@@ -1,18 +1,13 @@
-import { NewSectionTitle } from "../../components/NewSectionTitle/NewSectionTitle";
-import { PanelsTopLeft } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import Batch from "../../components/Batch/Batch";
 import { techStackIcons } from "../../data/techStackMeta";
+import ProjectHeader from "../../components/ProjectHeader/ProjectHeader";
 
 export default function AllProjects() {
   return (
     <>
-      <NewSectionTitle
-        className="mt-10"
-        icon={PanelsTopLeft}
-        title="All Projects"
-      />
+      <ProjectHeader title="All Projects" backTo="/" />
 
       <div className="px-4 mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-stretch">
         {projects.map((p) => {
@@ -26,6 +21,8 @@ export default function AllProjects() {
                 <img
                   src={p.image}
                   alt={p.projectName}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-48 object-cover"
                 />
               </div>

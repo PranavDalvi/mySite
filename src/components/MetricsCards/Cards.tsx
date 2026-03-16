@@ -6,12 +6,12 @@ interface CardProps {
 
 const Cards = ({ number, text, addPlus }: CardProps) => {
   return (
-    <div className="w-full p-5 flex flex-col gap-2 border border-[#1c1c21] transperent-card rounded-lg items-center text-center md:items-start md:text-left">
-      <span className="text-3xl md:text-4xl font-bold text-shadow leading-tight">
+    <div className="w-full p-5 md:p-6 flex flex-col gap-3 transperent-card rounded-xl items-center text-center md:items-start md:text-left shadow-[0_16px_34px_rgba(2,9,20,0.4)] hover:translate-y-[-2px] transition-transform duration-200">
+      <span className="display-face text-3xl md:text-4xl font-bold text-shadow leading-tight">
         {number}
         {addPlus ? "+" : ""}
       </span>
-      <span className="text-sm md:text-base text-gray-200">{text}</span>
+      <span className="text-sm md:text-base text-[#d8e4f9]">{text}</span>
     </div>
   );
 };

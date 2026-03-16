@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
   //   accent: ["#e44c65", "#b1202b"],
   //   projectName: "Droolin",
   //   role: "NextJS Developer",
-  //   dateRange: "May 2025 – Present",
+  //   dateRange: "May 2025 - Present",
   //   location: "Remote",
   //   description:
   //     "Droolin is a behavioral commerce layer for modern restaurants - unlocking performance, loyalty, and brand identity through menu intelligence.",

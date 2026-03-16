@@ -9,7 +9,7 @@ interface ButtonProps {
 const Button = ({ children, onClick, className = "" }: ButtonProps) => {
   return (
     <button
-      className={`p-2 bg-[#EBF3FA] text-black rounded-lg font-semibold ${className}`}
+      className={`px-4 py-2.5 bg-gradient-to-r from-[#7fd0ff] to-[#9df7e0] text-[#071322] rounded-xl font-semibold shadow-[0_10px_25px_rgba(32,118,176,0.35)] hover:translate-y-[-1px] hover:shadow-[0_14px_30px_rgba(25,110,168,0.42)] active:translate-y-0 transition-all duration-200 ${className}`}
       onClick={onClick}
     >
       <div className="flex flex-row gap-2 items-center justify-center">
