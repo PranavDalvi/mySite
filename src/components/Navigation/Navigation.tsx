@@ -118,9 +118,9 @@ const Navigation = () => {
             <button
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
-              className="md:hidden p-2 rounded-xl hover:bg-white/10 border border-white/10 text-slate-300"
+              className="md:hidden p-2.5 rounded-xl hover:bg-white/10 border border-white/10 text-slate-300 transition-colors flex items-center justify-center min-w-[40px] min-h-[40px]"
             >
-              {open ? <X size={18} /> : <Menu size={18} />}
+              {open ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Navigation = () => {
         {/* Mobile overlay */}
         {open && (
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
             onClick={() => setOpen(false)}
             aria-hidden
           />
@@ -148,7 +148,7 @@ const Navigation = () => {
                 e.preventDefault();
                 scrollToId("work");
               }}
-              className="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium"
+              className="p-3 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium flex items-center min-h-[44px]"
             >
               Work
             </a>
@@ -158,7 +158,7 @@ const Navigation = () => {
                 e.preventDefault();
                 scrollToId("experience");
               }}
-              className="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium"
+              className="p-3 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium flex items-center min-h-[44px]"
             >
               Experience
             </a>
@@ -168,7 +168,7 @@ const Navigation = () => {
                 e.preventDefault();
                 scrollToId("skills");
               }}
-              className="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium"
+              className="p-3 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 text-sm font-medium flex items-center min-h-[44px]"
             >
               Skills
             </a>
@@ -179,11 +179,11 @@ const Navigation = () => {
                   setOpen(false);
                   setIsResumeOpen(true);
                 }}
-                className="text-center py-2.5 rounded-xl text-xs font-mono font-medium text-slate-200 border border-white/10 hover:bg-white/5 cursor-pointer inline-flex items-center justify-center gap-1.5"
+                className="w-full text-center py-3 rounded-xl text-xs font-mono font-medium text-slate-200 border border-white/10 hover:bg-white/5 cursor-pointer inline-flex items-center justify-center gap-2 min-h-[44px]"
               >
-                <FileText size={14} className="text-sky-400" /> View Resume
+                <FileText size={15} className="text-sky-400" /> View Resume
               </button>
-              <Button onClick={() => scrollToId("contact")} className="w-full text-xs">
+              <Button onClick={() => scrollToId("contact")} className="w-full text-xs py-3 min-h-[44px]">
                 Contact Me
               </Button>
             </div>

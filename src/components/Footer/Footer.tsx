@@ -9,24 +9,24 @@ export const Footer = () => {
         <span>Pranav Dalvi — Software Engineer</span>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
         <a
           target="_blank"
           href="https://www.linkedin.com/in/pranav-dalvi-03947a207"
           rel="noopener noreferrer"
           aria-label="Open LinkedIn profile in a new tab"
-          className="p-2 rounded-lg bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white transition-all"
+          className="p-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white transition-all flex items-center justify-center min-w-[40px] min-h-[40px]"
         >
-          <Linkedin size={16} />
+          <Linkedin size={18} />
         </a>
         <a
           target="_blank"
           href="https://github.com/PranavDalvi"
           rel="noopener noreferrer"
           aria-label="Open GitHub profile in a new tab"
-          className="p-2 rounded-lg bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white transition-all"
+          className="p-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white transition-all flex items-center justify-center min-w-[40px] min-h-[40px]"
         >
-          <Github size={16} />
+          <Github size={18} />
         </a>
         <a
           href="#contact"
@@ -38,9 +38,9 @@ export const Footer = () => {
             }
           }}
           aria-label="Go to Contact form"
-          className="p-2 rounded-lg bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white transition-all"
+          className="p-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white transition-all flex items-center justify-center min-w-[40px] min-h-[40px]"
         >
-          <Mail size={16} />
+          <Mail size={18} />
         </a>
       </div>
 

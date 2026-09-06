@@ -25,7 +25,7 @@ export const ResumeDocument: React.FC<ResumeDocumentProps> = ({ forPrint = false
     <div
       id="printable-resume"
       className={`bg-white text-[#1a202c] font-sans leading-normal selection:bg-blue-100 ${
-        forPrint ? "w-full p-0" : "max-w-[850px] mx-auto p-8 md:p-12 shadow-2xl rounded-xl border border-gray-200"
+        forPrint ? "w-full p-0" : "max-w-[850px] mx-auto p-4 sm:p-8 md:p-12 shadow-2xl rounded-xl border border-gray-200"
       }`}
       style={{
         fontFamily: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
