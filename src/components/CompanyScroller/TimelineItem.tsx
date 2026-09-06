@@ -54,14 +54,13 @@ export const TimelineItem = ({
           </div>
         )}
 
-        <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc ml-4">
-          {responsibilities.map((task, i) => (
-            <li key={i} className="pl-1">
-              {renderFormattedText(task)}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="mt-4 space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc ml-4">
+        {responsibilities.map((task, i) => (
+          <li key={i} className="pl-1">
+            {renderFormattedText(task)}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
