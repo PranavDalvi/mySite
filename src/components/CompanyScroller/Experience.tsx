@@ -21,16 +21,11 @@ const Experience = () => {
       </div>
 
       {/* stack each TimelineItem with vertical spacing */}
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto space-y-5">
         {experiences.map((item, index) => (
           <TimelineItem
             key={index}
             {...item}
-            isFirstItem={index === 0}
-            isLastItem={index === experiences.length - 1}
-            prevAccentEnd={
-              index > 0 ? experiences[index - 1].accent[1] : undefined
-            }
           />
         ))}
       </div>
