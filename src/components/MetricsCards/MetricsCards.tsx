@@ -30,7 +30,7 @@ const MetricsCards = () => {
           tag="RESEARCH"
           value="1 Paper"
           label="TVCR 2025 Publication"
-          description="Peer-reviewed paper on Indian script multilingual OCR & NLP (DOI indexed)."
+          description="Peer-reviewed research on CNN binary malware visualization in Dvimaya (DOI indexed)."
           icon={<BookOpen size={18} className="text-amber-400" />}
         />
       </div>
