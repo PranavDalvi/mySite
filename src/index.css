@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --bg-950: #06090e;
+  --bg-900: #0a0e17;
+  --bg-850: #0e1422;
+  --surface-800: rgba(14, 21, 36, 0.78);
+  --surface-700: rgba(20, 31, 52, 0.65);
+  --line-subtle: rgba(255, 255, 255, 0.08);
+  --line-highlight: rgba(148, 197, 255, 0.22);
+  --text-100: #f8fafc;
+  --text-200: #e2e8f0;
+  --text-400: #94a3b8;
+  --accent-blue: #38bdf8;
+  --accent-cyan: #2dd4bf;
+  --accent-indigo: #818cf8;
+
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text-200);
+  background-color: var(--bg-950);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-950);
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.12), transparent),
+    radial-gradient(circle at 90% 20%, rgba(99, 102, 241, 0.07), transparent 40%),
+    radial-gradient(circle at 10% 80%, rgba(45, 212, 191, 0.05), transparent 40%),
+    linear-gradient(180deg, #070a10 0%, #0a0e17 50%, #06090e 100%);
+  background-attachment: fixed;
+}
+
+#root {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+h1,
+h2,
+h3,
+.display-face {
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-mono-code {
+  font-family: "JetBrains Mono", monospace;
+}
+
+::selection {
+  background-color: rgba(56, 189, 248, 0.28);
+  color: #ffffff;
+}
+
+.transperent-card,
+.transparent-card {
+  background: linear-gradient(170deg, rgba(15, 23, 42, 0.75) 0%, rgba(10, 15, 29, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, 0.4),
+    0 10px 30px -10px rgba(2, 6, 23, 0.7),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.transperent-card:hover,
+.transparent-card:hover {
+  border-color: rgba(148, 197, 255, 0.22);
+}
+
+/* Navbar transition styles */
+.nav-wrapper {
+  transition:
+    box-shadow 280ms ease,
+    margin 280ms ease,
+    backdrop-filter 280ms ease,
+    border-color 280ms ease,
+    transform 280ms ease,
+    padding 280ms ease;
+}
+
+.nav-wrapper.floaty {
+  margin: 0.6rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(0);
+}
+
+.nav-wrapper.flat {
+  margin: 0;
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+}
+
+.section-fade {
+  animation: sectionFade 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 10mm 14mm;
+  }
+  body {
+    background: white !important;
+    color: #1a202c !important;
+  }
+  #root {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  header,
+  footer,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+  #printable-resume {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+}
