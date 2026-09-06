@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ArrowDown, Mail, Check, Copy } from "lucide-react";
 import Button from "../Button/Button";
 

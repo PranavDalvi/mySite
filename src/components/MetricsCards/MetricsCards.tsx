@@ -1,4 +1,3 @@
-import React from "react";
 import Cards from "./Cards";
 import { Zap, Layers, ShieldCheck, BookOpen } from "lucide-react";
 

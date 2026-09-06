@@ -1,4 +1,3 @@
-import React from "react";
 import type { BatchProps } from "../../types/BatchProps";
 
 const Batch = ({

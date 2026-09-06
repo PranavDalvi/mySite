@@ -1,4 +1,3 @@
-import React from "react";
 import type { Experience } from "../../types/experience";
 
 const renderFormattedText = (text: string) => {
@@ -15,22 +14,20 @@ const renderFormattedText = (text: string) => {
   });
 };
 
-export const TimelineItem: React.FC<
-  Experience & {
-    isFirstItem?: boolean;
-    isLastItem?: boolean;
-    prevAccentEnd?: string;
-  }
-> = ({
-  accent,
+interface TimelineItemProps extends Experience {
+  isFirstItem?: boolean;
+  isLastItem?: boolean;
+  prevAccentEnd?: string;
+}
+
+export const TimelineItem = ({
   role,
   dateRange,
   responsibilities,
-  prevAccentEnd,
   company,
   location,
   projectName,
-}) => {
+}: TimelineItemProps) => {
   return (
     <div className="relative pl-8 md:pl-12 py-6 md:py-8 border-l border-white/10 ml-3 md:ml-4">
       {/* Node Dot */}

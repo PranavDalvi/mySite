@@ -1,4 +1,3 @@
-import React from "react";
 import { TimelineItem } from "./TimelineItem";
 import { experiences } from "../../data/experiences";
 import { BriefcaseBusiness } from "lucide-react";

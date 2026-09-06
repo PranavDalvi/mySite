@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { X, Printer, Download, Sparkles, ExternalLink } from "lucide-react";
+import { useEffect } from "react";
+import { X, Download, Sparkles, ExternalLink } from "lucide-react";
 import ResumeDocument from "./ResumeDocument";
 import { Link } from "react-router-dom";
 
@@ -88,7 +88,7 @@ export const printResumeDocument = () => {
   }, 400);
 };
 
-export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
+export const ResumeModal = ({ isOpen, onClose }: ResumeModalProps) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();

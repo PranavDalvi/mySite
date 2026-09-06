@@ -1,4 +1,3 @@
-import React from "react";
 import { Radio, Cpu, Server, Compass } from "lucide-react";
 import ValueCard from "./ValueCard";
 import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";

@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import Batch from "../../components/Batch/Batch";
 import { techStackIcons } from "../../data/techStackMeta";
 import ProjectHeader from "../../components/ProjectHeader/ProjectHeader";
 import { Footer } from "../../components/Footer/Footer";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const CATEGORIES = [
   "All",

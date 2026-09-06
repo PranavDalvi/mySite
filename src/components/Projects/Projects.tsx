@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { NewSectionTitle } from "../NewSectionTitle/NewSectionTitle";
 import { PanelsTopLeft, ArrowUpRight, GraduationCap, Briefcase, BookOpen, User } from "lucide-react";
 import { Link } from "react-router-dom";
