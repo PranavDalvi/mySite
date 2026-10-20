@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/mySite/",
+  base: "/",
   server: {
     // Allow ngrok host for local development tunnels
     allowedHosts: ["afb92d2d2269.ngrok-free.app"],
